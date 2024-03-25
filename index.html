@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Timer v2</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="./src/main.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <section id="section-timer">
+      <section id="timer">
+        <span id="minutes">25</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </section>
+      <section id="controls">
+        <button data-action="toggleRunning" class="ph-bold ph-play-circle">
+          <span class="sr-only">Iniciar contador</span>
+        </button>
+        <button data-action="toggleRunning" class="ph-bold ph-stop-circle">
+          <span class="sr-only">Parar contador</span>
+        </button>
+        <button data-action="addFiveMinutes" class="ph-bold ph-plus-circle">
+          <span class="sr-only">Adicionar 5 minutos ao contador</span>
+        </button>
+        <button data-action="decreaseFiveMinutes" class="ph-bold ph-minus-circle">
+          <span class="sr-only">Diminuir 5 minutos ao contador</span>
+        </button>
+      </section>
+    </section>
+    
+    <section id="sounds">
+      <button data-action="playForestSound" class="buttonImg">
+        <img src="./assets/forest-icon.svg" alt="forest icon">
+        <span class="sr-only">Tocar som de floresta</span>
+      </button>
+      <button data-action="playRainSound" class="buttonImg">
+        <img src="./assets/rain-icon.svg" alt="rain icon">
+        <span class="sr-only">Tocar som de chuva</span>
+      </button>
+      <button data-action="playCafeteriaSound" class="buttonImg">
+        <img src="./assets/cafeteria-icon.svg" alt="cafeteria icon">
+        <span class="sr-only">Tocar som de cafeteria</span>
+      </button>
+      <button data-action="playFireplaceSound" class="buttonImg">
+        <img src="./assets/fire-icon.svg" alt="fire icon">
+        <span class="sr-only">Tocar som de lareira</span>
+      </button>
+    </section>
+  </div>
+</body>
+</html>

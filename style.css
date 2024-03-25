@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color-primary: #323238;
+  --text-color-secondary: #ffffff;
+  --button-color-primary: #E1E1E6;
+  --button-color-secondary: #02799D;
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+body, span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color-primary);
+
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0px;
+  border: 0;
+  appearance: none;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 19.2rem;
+}
+
+#timer {
+  font-size: 12.6rem;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 4.0;
+  margin-top: 4.8rem;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+#controls button {
+  color: var(--text-color-primary);
+  font-size: 4.8em;
+}
+
+#activeButton {
+  background-color: var(--button-color-secondary);
+}
+
+#activeButton img {
+  filter: invert(100%) sepia(13%) saturate(0%) hue-rotate(113deg) brightness(109%) contrast(101%);
+}
+
+#sounds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+
+  justify-items: center
+}
+
+.buttonImg {
+  width: 13.8rem;
+  height: 15.2rem;
+  background-color: var(--button-color-primary);
+  border-radius: 3.4rem;
+  padding: 4.8rem auto;
+}
+
